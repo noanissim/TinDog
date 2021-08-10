@@ -1,0 +1,222 @@
+body {
+  font-family: "Montserrat";
+  font-weight: 500;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+
+/* multiple selectors */
+/* selector1, selector2{
+  color: ;
+} בעיקר לכותרות*/
+/* Hierarchial selectors */
+/* selector1 selector2{
+  selctor1-parent, selector2-child
+  #title .container-fluid
+  קריאה מימין לשמאל
+} */
+/* Combined selectors */
+/* קריאה משמאל לימין
+selector1.selector2{
+  או #
+  div.container-fluid{color:red}
+  לדיב שיש לו קלאס כזה יהיה בצבע אדום, ספיציפית עליו לא על הילד
+וגם שני סלקטורים צריכים להיות על אותו האלמנט
+}
+*/
+
+/* CSS-selector prioroty
+1.inline style- not recommended
+2.ID, מומלץ רק לקונטייירים ולקרסה
+3.class
+4.אלמנטים כלליים כמו h1 */
+
+p {
+  color: #8f8f8f;
+}
+
+
+/* headings */
+.big-heading {
+  font-family: 'Montserrat';
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  /* color: white;למקרה שארצה להוסיף עוד כותרת לכן עדיף בטייטל */
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* containers */
+.contaier-fluid {
+  padding: 7% 15%;
+}
+
+/* section */
+.colored-section{
+  color:white;
+  background-color: #ff4c68;
+}
+.white-section{
+  background-color: #EEEEEE;
+}
+
+
+
+/* Navigation bar styling */
+.navbar {
+  padding: 0 0 3.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat";
+  font-weight: lighter;
+}
+
+/* title section */
+
+#title .contaier-fluid {
+  padding: 3% 15% 7%;
+  /* בגלל שזה מדויק יתר וספיציפי זה ידרוס אההגדר הקודמת ספיציפית לקונטיינר הזה בלבד */
+  text-align: left;
+}
+
+/* Download buttons */
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* title image */
+.title-image {
+  width: 60%;
+  transform: rotate(25deg);
+  /* לסובב את התמונה 25 מעלות ימינה */
+  position: absolute;
+  /* שמה את התמונה באבסולוט כדי להוציא אותה מהזרם כדי שרק היא תוכל להיות מעל הקונטיינר שלה אבל מתחת לפיצרס */
+}
+
+#features {
+  position: relative;
+  z-index: 1;
+  /*לא חובה כי זה בא אחרי באינדקס */
+  /* פוזישיין רלטיב עי באבסולוט זה יכסה קונטיינרים אחרים
+  זד אחד כי זה מעל */
+  /* לפי הרשימת זרימה בגלל ששניהםאלמנטים עם מיקום
+אפשר לשים בלי זד1 כי פיצרס בא אחרי התמונה */
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+
+.feature-item {
+  padding: 5%;
+}
+
+.fas-item {
+  color: #ef8172;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.fature-p {
+  color: #515E63;
+}
+
+.fas-item:hover {
+  color: #ff4c68;
+}
+
+/* testimonials */
+#testimonials {
+  background-color: #ef8172;
+  /* איידי עולה בהיררכיה על כל ולכן מקבל את הרקע הזה ולא הורוד */
+}
+
+.carousel-item {
+  /* padding: 7% 15%; */
+  /* בכוונה לא על כל האיידי כדי שהכפתורים יזוזו החוצה */
+}
+
+.testimonial-image {
+  border-radius: 100%;
+  width: 20%;
+  margin: 20px;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* press */
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* pricing section */
+#pricing {
+  padding: 100px;
+}
+
+.pricing-coloumn {
+  padding: 3% 2%;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.pricing-text {
+  font-size: 1.5rem;
+}
+
+#cta {
+}
+
+#footer {
+}
+
+.contact-me {
+  margin: 20px;
+  color: #423F3E;
+}
+
+@media (max-width: 1000px)
+
+/* כלומר רק טלפונים וטאבלטים מתחת ל1028 יהיה להם עיצוב שונה שלא תלוי בבוטסטראפ */
+  {
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0deg);
+  }
+}
